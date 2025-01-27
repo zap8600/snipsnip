@@ -26,3 +26,18 @@ void I_UpdateJoystick(void) {
         D_PostEvent(&ev);
     }
 }
+
+
+/*
+Drawing code
+*/
+
+// Max resolution defined in the PROS LVGL config
+#define DOOMGENERIC_RESX 480
+#define DOOMGENERIC_RESY 240
+
+// Last time, I drew the framebuffer pixel by pixel, but it drew incorrectly
+void DG_DrawFrame() {
+    // I don't think this is right, but this is what PROS does for LVGL, so I'm just going to do the same thing.
+    screen_copy_area(0, 0, DOOMGENERIC_RESX, DOOMGENERIC_RESY, DG_ScreenBuffer, DOOMGENERIC_RESX + 1);
+}
