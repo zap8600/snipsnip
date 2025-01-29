@@ -9,3 +9,4 @@ Networking code
 */
 
 // Unfortunately, this is 2-player only. VEX Link only supports linking 2 radios together, no more.
+// Also, doomgeneric makes this way difficult by not having the network code at all. The calls for it are there, but no actual code...
